@@ -20,3 +20,5 @@ meson $build --cross-file "$prefix_dir"/crossfile.txt \
 
 ninja -C $build -j$cores
 DESTDIR="$prefix_dir" ninja -C $build install
+
+cp "$build"/meson-private/harfbuzz.pc "$PKG_CONFIG_LIBDIR"
